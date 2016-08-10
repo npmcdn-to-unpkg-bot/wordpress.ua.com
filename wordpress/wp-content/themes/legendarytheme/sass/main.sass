@@ -1,0 +1,1243 @@
+@import "reset"
+@import "../libs/bourbon/app/assets/stylesheets/bourbon"
+
+
+
+body
+  font-family: 'Roboto-Medium', $helvetica
+  transition: background-color 1s ease
+  overflow-x: hidden
+  &.color-company,
+  &.color-services
+    background-color: #cdffcc
+  &.color-works,
+  &.color-clients
+    background-color: #ffffcd
+  &.color-reviews,
+  &.color-agency,
+  &.color-contact
+    background-color: #cdffff
+  &:before
+    content: ''
+    background: url("../img/camo.png") center center no-repeat
+    background-size: cover
+    position: fixed
+    width: 100%
+    z-index: -200
+    height: 100%
+    top: 0
+    left: 0
+
+
+.camo
+  position: relative
+
+#posa
+  //position: absolute
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+.all-services-btn.presentation
+  position: fixed
+  right: -78px
+  top: 50%
+  z-index: 200
+  transform: rotate(-90deg)
+  border-bottom: 0
+  display: none
+
+.to-top
+  text-align: center
+  color: #424242
+  display: none
+  position: fixed
+  right: 5%
+  z-index: 100
+  bottom: 9%
+  span
+    display: block
+    text-transform: uppercase
+    margin-top: 10px
+    transition: all 0.2s ease
+    font-family: 'Roboto-Medium', $helvetica
+    font-size: 13px
+    font-weight: 500
+  .fa
+    font-size: 31px
+    display: block
+  &:hover
+    text-decoration: none
+    color: #424242
+    span
+      margin-top: 15px
+
+.bread-crumbs
+  text-align: center
+  font-family: 'Roboto-Reguler', $helvetica
+  font-size: 11px
+  font-weight: 400
+  margin-top: 25px
+  text-transform: capitalize
+  a
+    color: #424242
+  span
+    margin: 0 7px
+
+/*--------------------------------------------------------------------MENU--------------------------------------------------------------------*/
+
+.bt-menu-trigger
+  position: absolute
+  top: 50px
+  right: 20px
+  z-index: 100
+  display: block
+  width: 20px
+  height: 16px
+  cursor: pointer
+  b.title
+    position: absolute
+    left: -50px
+    top: 0
+    color: white
+    text-transform: uppercase
+    font-size: 13px
+    font-weight: 500
+    line-height: 20px
+  span
+    position: absolute
+    top: 50%
+    left: 0
+    display: block
+    width: 100%
+    height: 2px
+    background-color: #fff
+    font-size: 0px
+    user-select: none
+    &:before, &:after
+      position: absolute
+      left: 0
+      width: 100%
+      height: 100%
+      transition: background 0.3s
+      background: #fff
+      content: ''
+      transition: transform 0.3s
+    &:before
+      transform: translateY(-300%)
+    &:after
+      transform: translateY(300%)
+
+.bt-menu-trigger.open
+  span
+    &:before
+      transform: translateY(-350%)
+    &:after
+      transform: translateY(350%)
+
+.sidr
+  background-color: #424242
+  padding: 30px 30px
+  li
+    position: relative
+    overflow: hidden
+    &.active
+      a
+        transform: translateY(-100%)
+        &::before
+          color: orange
+      
+  a
+    position: relative
+    padding: 15px 0
+    display: block
+    text-decoration: none
+    color: #fff
+    transition: all 0.2s ease
+    &:before
+      content: attr(data-attr)
+      top: 100%
+      display: block
+      width: 100%
+      padding: 15px 0
+      position: absolute
+    &:hover
+      transform: translateY(-100%)
+      &::before
+        color: orange
+
+
+/*--------------------------------------------------------------------HEADER--------------------------------------------------------------------*/
+
+header
+  height: 100vh
+  padding: 0 15px
+.head-top
+  padding-top: 50px
+  overflow: hidden
+  position: relative
+  padding-bottom: 35px
+  z-index: 100
+  transition: all 0.3s ease
+  .head-logo
+    display: none
+  &.height-100
+    height: 100%
+  &.mobile
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding: 0
+    padding: 35px 15px
+    &.menu-open
+      left: -260px
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      background-color: rgba(#fff, 0.7)
+      height: 90px
+      width: 100%
+      z-index: -1
+    .head-logo
+      display: block
+      float: left
+      margin-top: -27px
+      img
+        max-height: 70px
+    .bt-menu-trigger
+      top: 33px
+    a, .bt-menu-trigger b.title, .fa
+      color: #434343
+    .bt-menu-trigger span:before, .bt-menu-trigger span:after, .bt-menu-trigger span
+      background-color: #434343
+    .fa
+    font-size: 13px
+    .tel-num
+      float: right
+      margin-right: 50px
+  a
+    color: #fff
+    transition: color 0.2s ease
+    margin-left: 15px
+    font-family: 'Roboto-Regular', $helvetica
+    font-size: 15px
+    font-weight: 400
+    &:hover
+      text-decoration: none
+      color: #979797
+  .tel-num
+    float: left
+    color: #fff
+  .mail-menu
+    float: right
+    color: #fff
+    margin-right: 115px
+
+.bg-video-mobile
+  background: url("../img/Depositphotos_99295414_original.jpg") center center no-repeat
+  background-size: cover
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  display: none
+
+
+h1
+  color: white
+  font-size: 48px
+  font-weight: 500
+  z-index: 100
+  position: relative
+  line-height: 80px
+  text-transform: uppercase
+
+.table
+  position: absolute
+  height: 100%
+  top: 0
+  left: 0
+  right: 0
+  width: 100%
+  display: table
+  .table-cell
+    display: table-cell
+    height: 100%
+    vertical-align: middle
+    text-align: center
+    width: 100%
+
+header
+  overflow: hidden
+  position: relative
+  video
+    position: absolute
+    z-index: -100
+    top: 50%
+    left: 50%
+    min-width: 100%
+    min-height: 100%
+    width: auto
+    height: auto
+    transform: translateX(-50%) translateY(-50%)
+    background-color: #fff
+
+.center-text
+  position: absolute
+  z-index: 1
+  width: 100%
+  top: 0
+  left: 0
+  right: 0
+  height: 100%
+  background-color: rgba(0,0,0, 0.6)
+
+.slidedown-wrapper
+  position: absolute
+  z-index: 1
+  height: 130px
+  left: 0
+  right: 0
+  text-align: center
+  bottom: 0
+  .slidedown
+    display: inline-block
+    text-decoration: none
+    span, .fa
+      display: block
+    span
+      color: #fff
+      font-size: 13px
+      font-weight: 500
+      text-transform: uppercase
+    .fa
+      color: white
+      font-size: 20px
+      font-weight: 400
+      margin-top: 20px
+      transition: margin 0.3s ease
+  &:hover .fa
+    margin-top: 30px
+
+#for-prom
+  background: url("../img/header/for-prom.svg") center center no-repeat
+  background-size: cover
+  position: fixed
+  z-index: 50
+  bottom: 70px
+  left: 50px
+  width: 161px
+  height: 140px
+  text-align: center
+  padding-left: 20px
+  span
+    color: #72f86f
+    font-family: 'Roboto-Bold', $helvetica
+    font-size: 12px
+    font-weight: 700
+    text-decoration: none
+    display: block
+    margin-top: 30px
+    line-height: 23px
+  &:hover
+    text-decoration: none
+
+
+/*--------------------------------------------------------------------OUR COMPANY--------------------------------------------------------------------*/
+
+h2
+  color: #424242
+  font-family: 'Roboto-Regular', $helvetica
+  font-weight: 400
+  text-transform: uppercase
+  text-align: center
+  font-size: 30px
+  b
+    font-family: 'Roboto-Bold', $helvetica
+    font-weight: 700
+
+
+.our-company
+  padding: 180px 15px 75px
+  position: relative
+  @extend .camo
+
+.target-item
+  color: #424242
+  white-space: nowrap
+  position: relative
+  strong
+    font-family: 'Roboto-Black', $helvetica
+    font-size: 50px
+    float: left
+    margin-right: 15px
+    font-weight: 900
+  p
+    font-family: 'Roboto-Medium', $helvetica
+    font-size: 13px
+    text-transform: uppercase
+    white-space: normal
+    font-weight: 500
+    margin-top: 3px
+    line-height: 22px
+    display: inline-block
+    max-width: 260px
+  img
+    display: block
+    margin-top: 10px
+    &.line-60
+      position: absolute
+      top: 0
+      left: -100px
+    &.line-46
+      position: absolute
+      top: 0
+      left: 0
+    &.line-7850
+      position: absolute
+      top: 50px
+      left: -105px
+
+.target
+  margin-top: 95px
+  &-item
+    &.mt-50
+      margin-top: 50px
+    &.mt-70
+      margin-top: 70px
+  &-img
+    position: relative
+    .logo
+      position: absolute
+      display: block
+      top: 50%
+      margin-top: -70px
+      height: 120px
+      left: 50%
+      margin-left: -150px
+    .main
+      margin: 0 auto
+      display: block
+
+/*--------------------------------------------------------------------OUR SERVICES--------------------------------------------------------------------*/
+
+.our-services
+  padding-top: 75px
+  position: relative
+  padding-bottom: 105px
+  @extend .camo
+
+.carousel-services
+  margin-top: 105px
+
+.slick
+  z-index: 10
+  i.prev-arrow,
+  i.next-arrow
+    position: absolute
+    top: 35%
+    margin-top: -15px
+    color: #424242
+    font-size: 30px
+    cursor: pointer
+    z-index: 100
+  i.next-arrow
+    right: -5%
+  i.prev-arrow
+    left: -5%
+  .slick-slide
+    outline: none
+    position: relative
+
+.slide-item
+  outline: none
+  width: 260px
+  position: relative
+  display: block
+  text-decoration: none
+  text-align: center
+  padding-bottom: 4px
+  margin: 4px auto 0
+  &:hover
+    text-decoration: none
+  .img-wrap
+    width: 255px
+    height: 320px
+    overflow: hidden
+    position: relative
+    z-index: 1
+    img
+      height: 100%
+      display: block
+  .img-border
+    width: 206px
+    height: 328px
+    background-color: #424242
+    position: absolute
+    right: 0
+    top: -4px
+  h5
+    color: #424242
+    text-decoration: none
+    font-family: Roboto
+    font-size: 15px
+    text-transform: uppercase
+    font-family: 'Roboto-Bold', $helvetica
+    line-height: 53px
+    font-weight: 700
+  .bottom-line
+    width: 206px
+    height: 4px
+    background-color: #424242
+    position: absolute
+    right: 0
+
+.slick-dots
+  text-align: center
+  margin-top: 90px
+  li
+    display: inline-block
+  .custom-dot
+    width: 8px
+    height: 8px
+    background-color: #424242
+    display: block
+    margin: 0 17px
+    border-radius: 50%
+    cursor: pointer
+    position: relative
+    &:after
+      content: ''
+      transition: all 0.4s ease
+      border: 1px solid transparent
+      position: absolute
+      border-radius: 50%
+    &:hover:after
+      content: ''
+      width: 28px
+      height: 28px
+      border: 1px solid #424242
+      top: -10px
+      left: -10px
+      border-radius: 50%
+  .slick-active
+    .custom-dot:after
+      position: absolute
+      content: ''
+      width: 28px
+      height: 28px
+      border: 1px solid #424242
+      top: -10px
+      left: -10px
+      border-radius: 50%
+
+.all-services-btn
+  display: inline-block
+  text-transform: uppercase
+  color: #424242
+  font-family: 'Roboto-Medium', $helvetica
+  font-size: 15px
+  font-weight: 500
+  line-height: 52px
+  border: 2px solid #424242
+  background: none
+  z-index: 1
+  padding: 0 48px
+  overflow: hidden
+  position: relative
+  transition: all 0.3s ease
+  &:after
+    content: ''
+    position: absolute
+    top: -100%
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    background-color: #424242
+    transition: all 0.1s ease
+  &:hover,
+  &:focus
+    text-decoration: none
+    color: #fff
+    &:after
+      top: 0
+
+.button-wrap
+  text-align: center
+  position: relative
+  margin-top: 105px
+
+/*--------------------------------------------------------------------OUR WORKS--------------------------------------------------------------------*/
+
+.our-works
+  @extend .camo
+  position: relative
+  padding-top: 105px
+  padding-bottom: 70px
+  max-width: 1620px
+  width: 100%
+  margin: 0 auto
+  .video-item
+    height: 100%
+  .grid
+    margin: 0 auto
+    img
+      display: block
+      width: 100%
+      height: 100%
+      margin: 0
+      padding: 0
+      //transform: scale(1.02)
+    .grid-item
+      width: 159px
+      height: 159px
+      width: 10%
+      overflow: hidden
+    .grid-item--w2h2
+      height: 318px
+      width: 318px
+      width: 20%
+    .grid-item--w2
+      width: 318px
+      height: 159px
+      width: 20%
+  .works-item
+    position: relative
+    overflow: hidden
+    height: 100%
+    p
+      padding: 30px
+      bottom: 0
+      color: white
+      text-transform: uppercase
+      z-index: 1
+      width: 80%
+      text-decoration: none
+      opacity: 0
+      transition: opacity 0.3s ease
+      font-family: 'Roboto-Bold', $helvetica
+      font-size: 13px
+      font-weight: 700
+      line-height: 20px
+      position: absolute
+      display: inline-block
+    &::after
+      content: ''
+      top: 100%
+      opacity: 0
+      transition: all 0.2s ease
+    &:hover
+      p
+        opacity: 1
+      &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        opacity: 1
+        left: 0
+        background-color: rgba(#06bb42, 0.7)
+  .play-btn
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -32px
+    margin-left: -32px
+    width: 64px
+    height: 64px
+    background-color: rgba(#fff, 0.9)
+    border-radius: 50%
+    text-align: center
+    .fa
+      color: #424242
+      margin-top: 23px
+  .works-wrap
+    margin-top: 115px
+
+/*--------------------------------------------------------------------OUR CLIENTS--------------------------------------------------------------------*/
+
+
+.our-clients
+  @extend .camo
+  position: relative
+  padding-top: 70px
+  padding-bottom: 120px
+  .clients-wrap
+    margin-top: 115px
+    .grid-item
+      width: 11.11111112%
+      //height: 120px
+      img
+        width: 100%
+        height: 100%
+
+/*--------------------------------------------------------------------REVIEWS--------------------------------------------------------------------*/
+
+.reviews
+  @extend .camo
+  padding-top: 115px
+  padding-bottom: 100px
+  position: relative
+  .carousel-reviews
+    margin-top: 130px
+    .review-item
+      width: 194px
+      position: relative
+      text-align: center
+      padding-bottom: 4px
+      margin: 4px auto 0
+      .img-wrap
+        width: 190px
+        height: 270px
+        display: block
+        outline: none
+        overflow: hidden
+        position: relative
+        z-index: 1
+        img
+          height: 100%
+          display: block
+      .img-border
+        width: 140px
+        height: 278px
+        background-color: #424242
+        position: absolute
+        right: 0
+        top: -4px
+      h5
+        font-size: 12px
+        white-space: nowrap
+        margin-top: 40px
+        margin-bottom: 25px
+        color: #424242
+        text-transform: uppercase
+        font-family: 'Roboto-Bold', $helvetica
+        font-weight: 700
+      a
+        color: #424242
+        font-family: 'Roboto-Medium', $helvetica
+        font-size: 13px
+        font-weight: 500
+    .slick-dots
+      margin-top: 75px
+
+.nopadding
+  margin: 0!important
+  padding: 0!important
+
+/*--------------------------------------------------------------------AGENCY--------------------------------------------------------------------*/
+
+.agency
+  padding-top: 100px
+  padding-bottom: 80px
+  position: relative
+  @extend .camo
+  article
+    margin-top: 100px
+    color: #424242
+    font-family: 'Roboto-Regular', $helvetica
+    font-size: 13px
+    position: relative
+    font-weight: 400
+    line-height: 26px
+  .button-wrap
+    margin-top: 80px
+
+/*--------------------------------------------------------------------CONTACT US--------------------------------------------------------------------*/
+
+.contact-us
+  @extend .camo
+  padding-top: 80px
+  padding-bottom: 70px
+  h2
+    text-align: left
+    margin-left: 30px
+  form
+    .input
+      //width: 100%
+    .input__label
+      color: #424242
+      padding: 0
+    .input__field--jiro
+      color: #fff
+      font-weight: 400
+      font-family: 'Roboto-Regular', $helvetica
+    .input__label--jiro:before
+      border-top: 1px solid #424242
+    input
+      color: #fff
+    .input__label--jiro:after
+      background-color: #424242
+    .input__label-content--jiro
+      color: #424242
+      font-family: 'Roboto-Regular', $helvetica
+      font-size: 15px
+      font-weight: 400
+      padding: 7px 0
+      line-height: 20px
+    .textarea-wrap
+      margin: 30px 15px 0
+    textarea
+      background: none
+      width: 100%
+      max-width: 100%
+      height: 110px
+      outline: none
+      border: 0
+      margin-bottom: 60px
+      padding: 10px 0
+      border-bottom: 1px solid #424242
+      color: #424242
+      font-family: 'Roboto-Regular', $helvetica
+      font-size: 15px
+      font-weight: 400
+      &::placeholder
+        color: #424242
+        font-family: 'Roboto-Regular', $helvetica
+        font-size: 15px
+        font-weight: 400
+  .phone-list
+    margin: 10px 0
+  .contact-item
+    margin-bottom: 40px
+    .fa
+      color: #424242
+      font-size: 13px
+      vertical-align: top
+    .icon
+      vertical-align: top
+      display: inline-block
+      width: 10%
+    .text
+      display: inline-block
+      width: 88%
+      h5
+        text-transform: uppercase
+        font-family: 'Roboto-Bold', $helvetica
+        font-size: 13px
+        font-weight: 700
+        margin-bottom: 20px
+      p, a
+        text-decoration: none
+        transition: color 0.2s ease
+        font-family: 'Roboto-Regular', $helvetica
+        font-size: 15px
+        font-weight: 400
+        line-height: 20px
+        color: #424242
+      a:hover
+        color: #737373
+  h4
+    margin-left: 10%
+    text-transform: uppercase
+    color: #424242
+    font-family: 'Roboto-Bold', $helvetica
+    font-size: 13px
+    font-weight: 700
+  .social
+    margin-left: 10%
+    margin-top: 30px
+    li
+      display: inline-block
+      margin-right: 20px
+    .path
+      width: 45px
+      border-radius: 50%
+      display: block
+      text-align: center
+      height: 45px
+      border: 2px solid #424242
+      transition: all 0.2s ease
+      &:hover
+        background-color: #464646
+        .fa
+          color: #fff
+      .fa
+        line-height: 42px
+        color: #424242
+        transition: color 0.2s ease
+        font-size: 13px
+  .button-wrap
+    text-align: left
+    padding: 0 15px
+    margin: 0
+
+/*--------------------------------------------------------------------FOOTER--------------------------------------------------------------------*/
+
+footer
+  padding-top: 70px
+  padding-bottom: 90px
+  @extend .camo
+  position: relative
+  .copy,
+  .dizz,
+  a
+    line-height: 20px
+    color: #424242
+    font-family: 'Roboto-Regular', $helvetica
+    font-size: 13px
+    font-weight: 400
+    transition: color 0.2s ease
+  a:hover
+    color: #737373
+  .copy
+    float: left
+  .dizz
+    float: right
+
+
+/*--------------------------------------------------------------------404--------------------------------------------------------------------*/
+
+
+.error404
+  @extend .camo
+  height: 100vh
+  background-color: #cdffcc
+  h1
+    color: #424242
+    font-family: 'Roboto-Bold', $helvetica
+    font-size: 110px
+    font-weight: 700
+  h5
+    color: #424242
+    font-family: 'Roboto-Medium', $helvetica
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: 500
+    line-height: 70px
+  .all-services-btn
+    margin-top: 10px
+
+/*--------------------------------------------------------------------ABOUT--------------------------------------------------------------------*/
+
+.about-notmain
+  padding-top: 180px
+  @extend .camo
+  article
+    color: #424242
+    font-size: 13px
+    img
+      margin: 80px 0 70px
+      width: 100%
+    h5
+      font-family: 'Roboto-Bold', $helvetica
+      font-weight: 700
+      margin-bottom: 40px
+    p
+      font-family: 'Roboto-Regular', $helvetica
+      font-weight: 400
+      margin-bottom: 30px
+    li
+      font-family: 'Roboto-Regular', $helvetica
+      list-style-type: disc
+      list-style-position: inside
+    ul
+      margin-bottom: 30px
+
+/*--------------------------------------------------------------------ALL SERVICES--------------------------------------------------------------------*/
+
+.services-notmain
+  padding-top: 180px
+  @extend .camo
+  .items
+    padding-top: 85px
+  .slide-item
+    margin-bottom: 60px
+
+/*--------------------------------------------------------------------CLIENTS--------------------------------------------------------------------*/
+
+.clients-notmain
+  padding-top: 180px
+  @extend .camo
+  .clients-wrap
+    margin-top: 115px
+    .grid-item
+      width: 150px
+      height: 155px
+      text-align: center
+      margin-bottom: 60px
+      span
+        margin-top: 18px
+        display: inline-block
+        color: #424242
+        font-family: 'Roboto-Medium', $helvetica
+        font-size: 13px
+        font-weight: 500
+      img
+        width: 80%
+
+/*--------------------------------------------------------------------CONTACT--------------------------------------------------------------------*/
+
+.contact-notmain
+  @extend .camo
+  padding-top: 180px
+  .wrap
+    margin-top: 80px
+  .img-wrap
+    text-align: center
+    img
+      max-width: 235px
+      width: 100%
+  .content
+    color: #424242
+    text-align: center
+    span
+      display: block
+      white-space: nowrap
+      a
+        color: #424242
+        font-family: 'Roboto-Regular', $helvetica
+        font-size: 15px
+        margin-bottom: 20px
+        display: inline-block
+        font-weight: 400
+      .fa
+        margin-right: 10px
+        font-size: 13px
+    h5
+      font-family: 'Roboto-Medium', $helvetica
+      font-size: 15px
+      font-weight: 500
+      margin-top: 25px
+      margin-bottom: 20px
+    em
+      font-size: 13px
+      font-weight: 400
+      font-family: 'Roboto-Regular', $helvetica
+      font-style: italic
+      margin-bottom: 25px
+      display: inline-block
+  .info-wrap
+    height: 100%
+    width: 100%
+    position: relative
+    border: 3px solid #424242
+    text-align: center
+    color: #424242
+    font-family: 'Roboto-Regular', $helvetica
+    font-size: 15px
+    font-weight: 400
+    p,
+    a
+      margin-bottom: 30px
+      display: block
+      max-width: 80%
+      margin: 0 auto
+    a
+      font-weight: 500
+      color: #424242
+      font-family: 'Roboto-Medium', $helvetica
+    ul
+      margin-top: 10px
+    li
+      display: inline-block
+      margin: 0 15px
+      a
+        margin: 0
+        max-width: 100%
+        margin-bottom: 10px
+
+/*--------------------------------------------------------------------NEWS--------------------------------------------------------------------*/
+
+.news-notmain
+  @extend .camo
+  padding-top: 180px
+  .wrap
+    margin-top: 85px
+  h2
+    font-family: 'Roboto-Medium', $helvetica
+    font-weight: 500
+  .news-item
+    margin-bottom: 85px
+    img
+      width: 100%
+      display: block
+    a
+      text-decoration: none
+      text-transform: uppercase
+      color: #424242
+      font-family: 'Roboto-Medium', $helvetica
+      font-size: 16px
+      font-weight: 500
+      line-height: 30px
+      transition: color 0.2s ease
+      &:hover
+        color: #6d6d6d
+    .date
+      color: #6d6d6d
+      font-family: 'Roboto-Regular', $helvetica
+      font-size: 13px
+      font-weight: 400
+      margin-top: 30px
+      margin-bottom: 25px
+      .fa
+        font-size: 11px
+        margin-right: 5px
+        line-height: 13px
+  .news-item-no-date
+    margin-bottom: 85px
+    img
+      width: 100%
+      display: block
+    a
+      margin-top: 30px
+      display: inline-block
+      text-decoration: none
+      text-transform: uppercase
+      color: #424242
+      font-family: 'Roboto-Medium', $helvetica
+      font-size: 16px
+      font-weight: 500
+      line-height: 30px
+      transition: color 0.2s ease
+      &:hover
+        color: #6d6d6d
+
+
+.pagin-center
+  text-align: center
+
+.pagin,
+.pagin-center
+  margin-top: 35px
+  .arrow
+    margin: 0
+  li
+    display: inline-block
+    margin: 0 6px
+    a
+      color: #424242
+      font-family: 'Roboto-Medium', $helvetica
+      font-size: 13px
+      font-weight: 500
+      line-height: 23px
+      display: inline-block
+      text-decoration: none
+      width: 23px
+      text-align: center
+      transition: all 0.2s ease
+      border: 1px solid transparent
+      &.active
+        border: 1px solid #424242
+      &:hover
+        border: 1px solid #424242
+
+/*--------------------------------------------------------------------NEWS VNUTR--------------------------------------------------------------------*/
+
+.news_vnutr-notmain
+  @extend .camo
+  padding-top: 180px
+  .head
+    margin-top: 85px
+    overflow: hidden
+    margin-bottom: 80px
+    .company
+      float: left
+      margin-right: 35px
+    .content
+      height: 100%
+      padding: 0 35px
+      position: relative
+      color: #424242
+      font-family: 'Roboto-Regular', $helvetica
+      font-size: 13px
+      font-weight: 400
+      line-height: 28px
+      margin-top: 30px
+      p
+        margin-bottom: 10px
+      b
+        font-weight: 700
+        font-family: 'Roboto-Bold', $helvetica
+      strong
+        font-weight: 500
+        font-family: 'Roboto-Medium', $helvetica
+        text-transform: uppercase
+
+
+  img
+    width: 100%
+    display: block
+  .big-photo
+    margin-bottom: 30px
+
+nav.pag
+  margin-top: 70px
+  border-top: 2px solid #424242
+  border-bottom: 2px solid #424242
+  overflow: hidden
+  .prev, .next
+    text-transform: uppercase
+    display: block
+    color: #424242
+    font-family: 'Roboto-Bold', $helvetica
+    font-size: 13px
+    font-weight: 700
+    line-height: 63px
+    transition: color 0.2s ease
+    .fa
+      font-size: 19px
+    &:hover
+      text-decoration: none
+      color: #696969
+  .prev
+    float: left
+    .fa
+      margin-right: 12px
+  .next
+    float: right
+    .fa
+      margin-left: 12px
+
+
+/*--------------------------------------------------------------------SERVICE VNUTR--------------------------------------------------------------------*/
+
+.service_vnutr-notmain
+  @extend .camo
+  padding-top: 180px
+  .images
+    margin-top: 90px
+    img
+      display: block
+      width: 100%
+      margin-bottom: 15px
+  .text
+    margin-top: 55px
+    p, ul, b
+      display: inline-block
+      margin-bottom: 40px
+      color: #424242
+      font-family: 'Roboto-Regular', $helvetica
+      font-size: 13px
+      font-weight: 400
+      line-height: 28px
+    strong, b
+      font-family: 'Roboto-Bold', $helvetica
+      font-weight: 700
+    li
+      list-style-type: decimal
+      list-style-position: inside
+  .slick-slide
+    text-align: center
+    img
+      margin: 0 auto
+  h3
+    color: #424242
+    font-family: 'Roboto-Bold', $helvetica
+    font-size: 16px
+    font-weight: 700
+    margin-bottom: 70px
+    text-transform: uppercase
+    text-align: center
+
+//MEDIA
+@import "media"

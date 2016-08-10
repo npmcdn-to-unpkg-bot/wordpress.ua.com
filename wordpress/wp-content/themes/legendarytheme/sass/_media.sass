@@ -1,0 +1,201 @@
+@import "../libs/bourbon/app/assets/stylesheets/bourbon"
+
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  /**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  /**/
+
+
+
+  .target-item
+    margin-bottom: 30px
+    overflow: hidden
+    img
+      display: none
+  .target-item.mt-70
+    margin: 0
+    margin-bottom: 30px
+
+  .our-works
+    .grid
+      .grid-item
+        width: 14.28%
+      .grid-item--w2h2
+        width: 28.57%
+      .grid-item--w2
+        width: 28.57%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  /**/
+
+  h1
+      font-size: 40px
+  .head-top
+    &.mobile
+      .tel-num
+          display: none
+
+  .target
+    margin-top: 95px
+    &-item
+      &.mt-50
+        margin-top: 0
+      &.mt-70
+        margin-top: 0
+    &-img
+      display: none
+
+
+
+  .slick
+    i.prev-arrow,
+    i.next-arrow
+      display: none!important
+
+  .our-clients
+    .grid
+      .grid-item
+        width: 16.6666666667%
+
+  .clients-notmain
+    .grid
+      .grid-item
+        width: 14%
+
+  .our-works
+    .grid
+      .grid-item
+        width: 25%
+      .grid-item--w2h2
+        width: 50%
+      .grid-item--w2
+        width: 50%
+
+  .contact-us
+    .button-wrap
+      text-align: center
+
+  .contact-info
+    margin-top: 60px
+
+  /*Disable Animation on Mobile Devices*/
+  .animated
+      /*CSS transitions*/
+      -o-transition-property: none !important
+      -moz-transition-property: none !important
+      -ms-transition-property: none !important
+      -webkit-transition-property: none !important
+      transition-property: none !important
+      /*CSS transforms*/
+      -o-transform: none !important
+      -moz-transform: none !important
+      -ms-transform: none !important
+      -webkit-transform: none !important
+      transform: none !important
+      /*CSS animations*/
+      -webkit-animation: none !important
+      -moz-animation: none !important
+      -o-animation: none !important
+      -ms-animation: none !important
+      animation: none !important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  /**/
+
+  .mail-menu,
+  .tel-num
+      display: none
+
+  h1
+    font-size: 17px
+
+  #for-prom
+    width: 114px
+    height: 100px
+    padding-left: 14px
+    bottom: 30px
+    left: 20px
+    span
+      margin-top: 13px
+      font-size: 10px
+      line-height: 18px
+
+  .head-top
+    &.mobile
+      &:before
+        height: 70px
+      .bt-menu-trigger
+        top: 27px
+      .head-logo img
+        height: 50px
+
+  .our-clients
+    .grid
+      .grid-item
+        width: 25%
+
+  .our-works
+    .grid
+      .grid-item
+        width: 50%
+      .grid-item--w2h2
+        width: 100%
+      .grid-item--w2
+        width: 100%
+
+  .contact-us
+    form
+      .input
+        width: 90%
+
+  .clients-notmain
+    .grid
+      .grid-item
+        width: 25%
+
+  .news_vnutr-notmain .big-photo
+    margin: 0
+    margin-bottom: 0
+
+  .news_vnutr-notmain .head .content
+    display: block
+
+  .news_vnutr-notmain .head .company
+    float: none
+    width: 120px
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  /**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  /**/

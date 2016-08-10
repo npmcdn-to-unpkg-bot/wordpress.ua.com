@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #list video { display: none; }
+</style>
+
+<body>
+<!--<div class="grid-item grid-item&#45;&#45;w2h2">
+    <div class="video-item">
+        &lt;!&ndash; <a href="#" class="play-btn">
+             <i class="fa fa-fw fa-play" aria-hidden="true"></i>
+         </a>&ndash;&gt;
+        &lt;!&ndash;<ul id="list">
+            <li>&ndash;&gt;
+                &lt;!&ndash;<a href="#" class="play-btn" >Show Video!</a>&ndash;&gt;
+                <video width="320" height="270" controls>
+                    <source src="./video/Short BG.mp4">
+                </video>-->
+
+
+        <ul id="list">
+            <li>
+                <a href="#" class="video_trigger">Ethnics</a>
+                <video width="320" height="270" controls>
+                    <source src="./video/Short BG.mp4">
+                </video>
+            </li>
+        </ul>
+
+
+
+
+
+        <script>
+
+            $( '#list' ).on( 'click', '.video_trigger', function () {
+                $( this ).siblings( 'video' ).show();
+            });
+        </script>
+         <!--   </li>
+        </ul>-->
+        <!--<i class="fa fa-fw fa-play" aria-hidden="true"></i>-->
+        <!--<div id="video">
+            <video width="320" height="270" controls>
+                <source src="./video/Short BG.mp4"  type="video/mp4; codecs=avc1.42E01E,mp4a.40.2">
+            </video>
+        </div>-->
+       <!-- <script>
+            $( '#list' ).on( 'click', '.play-btn', function () {
+                $( this ).siblings( 'video' ).show();
+            });
+        </script>
+
+
+        <img src="./img/our-works/Слой 4.jpg" alt="">
+    </div>
+</div>-->
+</body>
+</html>
